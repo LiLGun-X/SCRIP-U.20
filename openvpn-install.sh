@@ -571,9 +571,9 @@ echo ""
 echo -e "\033[0;32m { DOWNLOAD MENU SCRIPT }${NC} "
 echo ""
 	cd /usr/local/bin
-wget -q -O m "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu"
+wget -q -O m "https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Menu"
 chmod +x /usr/local/bin/m
-	wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/MyGatherBk/PURE/master/Auto-Delete-Client"
+	wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Menu/Auto-Delete-Client"
 	chmod +x /usr/local/bin/Auto-Delete-Client 
 	apt-get -y install vnstat
 	cd /etc/openvpn/easy-rsa/
@@ -609,24 +609,24 @@ echo -e "${NC} "
 	elif [[ "$PROTOCOL" = 'tcp' ]]; then
 		echo "Protocal : TCP"
 	fi
-	echo "Port Nginx : 85"
+	echo "Port Nginx : 80"
 	echo "IP Proxy   : $IP"
 	echo "Port Proxy : $PROXY"
 	echo "port SSl"  :444
 	echo ""
 	case $OPENVPNSYSTEM in
 		1)
-		echo "Download My Config : http://$IP:85/$CLIENT.ovpn"
+		echo "Download My Config : http://$IP/$CLIENT.ovpn"
 		;;
 		2)
-		echo "Download Config : http://$IP:85/$CLIENT.ovpn"
+		echo "Download Config : http://$IP/$CLIENT.ovpn"
 		echo ""
 		echo "Your Username : $Usernames"
 		echo "Your Password : $Passwords"
 		echo "Expire : Never"
 		;;
 		3)
-		echo "Download Config : http://$IP:85/$CLIENT.ovpn"
+		echo "Download Config : http://$IP/$CLIENT.ovpn"
 		;;
 	esac
 	echo ""

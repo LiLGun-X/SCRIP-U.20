@@ -44,8 +44,8 @@ if [[ -e /etc/debian_version ]]; then
 echo ""
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${RED} #    OS  DEBIAN 8-9-10  OS  UBUNTU 14-16-18    #    "
-echo -e "${RED} #         BY :SP VPN-TH               #    "
-echo -e "${RED} #    LINE : BANKISSS       #    "
+echo -e "${RED} #              BY   : SP VPN-TH               #    "
+echo -e "${RED} #              LINE : BANKISSS       #    "
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${GREEN} ไอพีเซิฟ: $IP "
 echo -e "${NC} "
@@ -61,8 +61,8 @@ else
 echo ""
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${RED} #    OS  DEBIAN 8-9-10  OS  UBUNTU 14-16-18    #    "
-echo -e "${RED} #         BY :SP VPN-TH               #    "
-echo -e "${RED} #    LINE : BANKISSS       #    "
+echo -e "${RED} #                BY :SP VPN-TH               #    "
+echo -e "${RED} #               LINE : BANKISSS       #    "
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${GREEN} ไอพีเซิฟ: $IP "
 echo -e "${NC} "
@@ -80,8 +80,8 @@ fi
 echo ""
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${RED} #    OS  DEBIAN 8-9-10  OS  UBUNTU 14-16-18    #    "
-echo -e "${RED} #         BY :SP VPN-TH               #    "
-echo -e "${RED} #    LINE : BANKISSS       #    "
+echo -e "${RED} #                BY :SP VPN-TH               #    "
+echo -e "${RED} #               LINE : BANKISSS       #    "
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${GREEN} ไอพีเซิฟ: $IP "
 echo -e "${NC} "
@@ -89,7 +89,7 @@ echo -e "${NC} "
 cd
 echo -e "\033[35;1m
 ----------------------------------------------
-[√] ระบบสคริป  :SP VPN-TH 
+[√] ระบบสคริป  : SP VPN-TH 
 [√] กรุณารอสักครู่ .....
 [√] Loading .....
 ----------------------------------------------
@@ -172,8 +172,8 @@ else
 echo ""
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${RED} #    OS  DEBIAN 8-9-10  OS  UBUNTU 14-16-18    #    "
-echo -e "${RED} #         BY :SP VPN-TH               #    "
-echo -e "${RED} #    LINE : BANKISSS       #    "
+echo -e "${RED} #                BY :SP VPN-TH               #    "
+echo -e "${RED} #               LINE : BANKISSS       #    "
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${GREEN} ไอพีเซิฟ: $IP "
 echo -e "${NC} "
@@ -211,9 +211,9 @@ ${NC} "
 	echo ""
 	read -p "DNS : " -e -i 2 DNS
 	echo ""
-	echo -e " |${GRAY}1${NC}| 1 ไฟล์เชื่อมต่อได้ 1 เครื่องเท่านั้น แต่สามารถสร้างไฟล์เพิ่มได้"
-	echo -e " |${GRAY}2${NC}| 1 ไฟล์เชื่อมต่อได้หลายเครื่อง แต่ต้องใช้ชื่อบัญชีและรหัสผ่านเพื่อใช้เชื่อมต่อ"
-	echo -e " |${GRAY}3${NC}| 1 ไฟล์เชื่อมต่อได้ไม่จำกัดจำนวนเครื่อง"
+	echo -e " |${GRAY}1${NC}| ไฟล์แบบกำหนดเครื่อง(สร้างuserใหม่ต้องแจกไฟล์ใหม่)"
+	echo -e " |${GRAY}2${NC}| ไฟล์แบบทั่วไปสร้างรหัสเพิ่มได้"
+	echo -e " |${GRAY}3${NC}| ไฟล์แบบพิเศษไม่ต้องทำชื่อหรือรหัส(ทำเป็น RandomIP ได้)"
 	echo ""
 	read -p "Server System : " -e OPENVPNSYSTEM
 	echo ""
@@ -445,7 +445,7 @@ http {
 }
 END
 	mkdir -p /home/vps/public_html
-	echo "<pre>by MyGatherBK | MyGatherBK</pre>" > /home/vps/public_html/index.html
+	echo "<pre>by spvpnth | spvpnth</pre>" > /home/vps/public_html/index.html
 	echo "<?phpinfo(); ?>" > /home/vps/public_html/info.php
 	args='$args'
 	uri='$uri'
@@ -596,8 +596,8 @@ echo ""
 echo ""
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${RED} #    OS  DEBIAN 8-9-10  OS  UBUNTU 14-16-18    #    "
-echo -e "${RED} #         BY :SP VPN-TH               #    "
-echo -e "${RED} #    LINE : BANKISSS       #    "
+echo -e "${RED} #                BY :SP VPN-TH               #    "
+echo -e "${RED} #               LINE : BANKISSS       #    "
 echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${GREEN} ไอพีเซิฟ: $IP "
 echo -e "${NC} "

@@ -1935,10 +1935,10 @@ if [ $? -eq 0 ]; then
 	echo -e "\e[0m                                                   "
 	echo -e "\e[94m[][][]======================================[][][]"
 	echo -e "\e[0m                                                   "
-	echo -e "\e[93m           AutoScriptVPS by  MyGatherBK           "
+	echo -e "\e[93m           AutoScriptVPS by  SP VPN-TH           "
 	echo -e "\e[0m                                                   "
 	echo -e "\e[93m                   OpenVPN Port                   "
-	echo -e "\e[93m                       "$openvpnport
+	echo -e "\e[93m                      "$openvpnport
 	echo -e "\e[0m                                                   "
 	echo -e "\e[94m[][][]======================================[][][]\e[0m"
 
@@ -2120,7 +2120,7 @@ if [[ "$VERSION_ID" = 'VERSION_ID="9"' || "$VERSION_ID" = 'VERSION_ID="16.04"' |
 	00) # ==================================================================================================================
 
 cd /usr/local/bin
-wget -q -O m "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu"
+wget -q -O m "https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Menu"
 chmod +x /usr/local/bin/m
 m
 

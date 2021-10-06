@@ -126,6 +126,7 @@ if [[ "$VERSION_ID" = 'VERSION_ID="7"' || "$VERSION_ID" = 'VERSION_ID="8"' || "$
 	echo -e "|${z1}26${NC}|${z2} Restart Openvpn  ${NC} "
 	echo -e "|${z1}27${NC}|${z2} Reboot SERVER VPS  ${NC} "
 	echo -e "|${z1}28${NC}|${z2} Restart SQUID+SQUID3  ${NC} "
+        echo -e "|${z1}29${NC}|${z2} Backup & Restore  ${NC} "
         echo -e "|00|${cor[2]} Update MENU SCRIPT ${NC} ${GREEN} ✔ ${NC} "
 	echo ""
 	echo -e "${BLUE}>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< ${NC}"

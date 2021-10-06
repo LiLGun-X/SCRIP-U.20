@@ -21,7 +21,7 @@ ln -fs /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 clear
 # IP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 # if [[ "$IP" = "" ]]; then
-IP=$(wget -4qO- "http://whatismyip.akamai.com/")
+IP=$(wget -qO- icanhazip.com)
 # fi
 
 # Color
@@ -453,7 +453,7 @@ END
 	fastcgi_script_name='$fastcgi_script_name'
 	cat > /etc/nginx/conf.d/vps.conf <<END
 server {
-    listen       85;
+    listen       80;
     server_name  127.0.0.1 localhost;
     access_log /var/log/nginx/vps-access.log;
     error_log /var/log/nginx/vps-error.log error;

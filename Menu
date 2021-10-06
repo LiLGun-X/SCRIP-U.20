@@ -203,7 +203,7 @@ echo ""
 		exit
 	else
 		echo ""
-		echo "ชื่อบัญชีที่ระบุอยู่ในระบบแล้ว"
+		echo "ชื่อบัญชีมีระบุอยู่ในระบบแล้ว"
 		echo ""
 		read -p "กลับไปที่เมนู (Y or N) : " -e -i Y TOMENU
 
@@ -279,7 +279,7 @@ echo ""
 	echo "ชื่อบัญชี : $CLIENT"
 	echo "หมดอายุในวันที่ : $EXP"
 	echo ""
-	echo "ดาวน์โหลดคอนฟิก : http://$IP:85/$RANDOMFOLDER/$CLIENT.ovpn "
+	echo "ดาวน์โหลดคอนฟิก : http://$IP/$RANDOMFOLDER/$CLIENT.ovpn "
 	echo ""
 	exit
 
@@ -577,7 +577,7 @@ echo -e "${RED} =============== OS-32 & 64-bit =================    "
 echo -e "${GREEN} ไอพีเซิฟ: $IP "
 echo -e "${NC} "
 echo ""
-echo " เปิด-ปิด-รีสตาร์ท การทำงานของระบบ Admin MyGatherBK VPN "
+echo " เปิด-ปิด-รีสตาร์ท การทำงานของระบบ Admin SP VPN-TH "
 echo ""
 echo "|1| OPENVPN"
 echo "|2| SSH DROPBEAR"

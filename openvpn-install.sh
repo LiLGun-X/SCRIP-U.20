@@ -452,7 +452,6 @@ END
 	document_root='$document_root'
 	fastcgi_script_name='$fastcgi_script_name'
         cd /
-        
 	cat > /etc/nginx/conf.d/vps.conf <<END
 server {
     listen       80;

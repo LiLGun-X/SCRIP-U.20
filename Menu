@@ -6,7 +6,7 @@ VERSION_ID=$(cat /etc/os-release | grep "VERSION_ID")
 CHECKSYSTEM=$(tail -n +2 /etc/openvpn/server.conf | grep "^username-as-common-name")
 # IP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 # if [[ "$IP" = "" ]]; thenN
-IP=$(wget -4qO- "http://whatismyip.akamai.com/")
+IP=$(wget -qO- icanhazip.com)
 #
 # Color
 BLUE='\033[0;34m'

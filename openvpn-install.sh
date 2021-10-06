@@ -445,7 +445,7 @@ http {
 }
 END
 	mkdir -p /home/vps/public_html
-        echo "<input class="button" type="button" value="ดำเนินการต่อ" onclick="myFunction();closeWin()">" > /home/vps/public_html/index.html
+        echo "<input class='button' type='button' value='ดำเนินการต่อ' onclick='myFunction();closeWin()'>" > /home/vps/public_html/index.html
 	echo "" > /home/vps/public_html/info.php
 	args='$args'
 	uri='$uri'

@@ -445,7 +445,263 @@ http {
 }
 END
 	mkdir -p /home/vps/public_html
-	echo "<pre>by spvpnth | spvpnth</pre>" > /home/vps/public_html/index.html
+	echo "<?php
+include('https://spnet-vpn.online/photo/connect.php'); 
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+    function formatSearch(item) {
+        var selectionText = item.text.split("|");
+        var $returnString = $('<span>' + selectionText[0] + '</br><b>' + selectionText[1] + '</b></br>' + selectionText[2] +'</span>');
+        return $returnString;
+    };
+    function formatSelected(item) {
+        var selectionText = item.text.split("|");
+        var $returnString = $('<span>' + selectionText[0].substring(0, 21) +'</span>');
+        return $returnString;
+    };
+    $('.select2').select2({
+        templateResult: formatSearch,
+        templateSelection: formatSelected
+    });
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=time], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#fixedbtn{
+ position: fixed;
+margin: -100px -112px 12px 0;
+ 
+ width: 85%;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2 style="text-align:center;" >ระบบออโต้เพิ่ม Proxy แบบออโต้ </h2>
+
+
+
+
+	<form action="/apitest/action.php" method="post">
+
+    <div class="row">
+
+      <div class="col-75">
+<b><label style="font-size:19px;color: blue" for="html">เซิฟที่ต้องการใช้เป็น PROXY <br>(เป็นไอพีเท่านั้น) 👇</label><b>
+     <input id="city-box" type="text" name="hostname" class="email" placeholder="IP ของ VPS" value="" required>
+  <input id="city-box" type="text" name="rootpass" class="email" placeholder="รหัส VPS" value="" required>
+<div class="col-75">
+          
+        </div>
+    
+      </div>
+    </div>
+    <div class="row">
+     
+      <div class="col-75">
+        <hr>
+<label style="font-size:19px;color: red" for="html">***กรุณาเลือกสคริปต์ที่ท่านรันเซิฟ</label>
+<div class="col-75">
+          <select id="squid" class="squid" name="squid">
+            <option value="squid">สคริปต์ THAI.4G (แอดแสง)</option>
+            <option value="squid3">สคริปต์ SM VPN-TH (แอดยิ้ม) </option>
+            <option value="squid3">สคริปต์ SP VPN-TH (แอดแบงค์) </option>
+
+          </select>
+        </div>
+<label style="font-size:17px;color: blue"for="html">* เซิฟเวอร์จะต้องรันสคริปแล้ว</label>
+<label style="font-size:17px;color: blue"for="html">* ช่องที่เหลือห้ามลบใส่ IP ทับไปเลยตามต้องการต้องการ ได้จนครบ40ช่อง</label>
+<hr style="color: red">
+<b><label style="font-size:19px;color: blue" for="html">ใส่ไอพี IP ของไฟล์ (ไอพีเท่านั้น)👇</label><b>
+<input id="city-box" type="text" name="hostname1" class="email" placeholder="IP1" value="100.100.10.0" onClick="this.select();">
+<input id="city-box" type="text" name="hostname2" class="email" placeholder="IP2" value="100.100.10.2"onClick="this.select();">
+<input id="city-box" type="text" name="hostname3" class="email" placeholder="IP3" value="100.100.10.3"onClick="this.select();">
+<input id="city-box" type="text" name="hostname4" class="email" placeholder="IP4" value="100.100.10.4"onClick="this.select();">
+<input id="city-box" type="text" name="hostname5" class="email" placeholder="IP5" value="100.100.10.5"onClick="this.select();">
+<input id="city-box" type="text" name="hostname6" class="email" placeholder="IP6" value="100.100.10.6"onClick="this.select();">
+<input id="city-box" type="text" name="hostname7" class="email" placeholder="IP7" value="100.100.10.7"onClick="this.select();">
+<input id="city-box" type="text" name="hostname8" class="email" placeholder="IP8" value="100.100.10.8" onClick="this.select();">
+<input id="city-box" type="text" name="hostname9" class="email" placeholder="IP9" value="100.100.10.9"onClick="this.select();">
+<input id="city-box" type="text" name="hostname10" class="email" placeholder="IP10" value="100.100.10.10"onClick="this.select();">
+<input id="city-box" type="text" name="hostname11" class="email" placeholder="IP11" value="100.100.10.11"onClick="this.select();">
+<input id="city-box" type="text" name="hostname12" class="email" placeholder="IP12" value="100.100.10.12"onClick="this.select();">
+<input id="city-box" type="text" name="hostname13" class="email" placeholder="IP13" value="100.100.10.13"onClick="this.select();">
+<input id="city-box" type="text" name="hostname14" class="email" placeholder="IP14" value="100.100.10.14"onClick="this.select();">
+<input id="city-box" type="text" name="hostname15" class="email" placeholder="IP15" value="100.100.10.15" onClick="this.select();">
+ <input id="city-box" type="text" name="hostname16" class="email" placeholder="IP16" value="100.100.10.16"onClick="this.select();">
+<input id="city-box" type="text" name="hostname17" class="email" placeholder="IP17" value="100.100.10.17"onClick="this.select();">
+<input id="city-box" type="text" name="hostname18" class="email" placeholder="IP18" value="100.100.10.18"onClick="this.select();">
+<input id="city-box" type="text" name="hostname19" class="email" placeholder="IP19" value="100.100.10.19"onClick="this.select();">
+<input id="city-box" type="text" name="hostname20" class="email" placeholder="IP20" value="100.100.10.20"onClick="this.select();">
+<input id="city-box" type="text" name="hostname21" class="email" placeholder="IP1" value="100.100.10.22" onClick="this.select();">
+<input id="city-box" type="text" name="hostname22" class="email" placeholder="IP2" value="100.100.10.22"onClick="this.select();">
+<input id="city-box" type="text" name="hostname23" class="email" placeholder="IP3" value="100.100.10.23"onClick="this.select();">
+<input id="city-box" type="text" name="hostname24" class="email" placeholder="IP4" value="100.100.10.24"onClick="this.select();">
+<input id="city-box" type="text" name="hostname25" class="email" placeholder="IP5" value="100.100.10.25"onClick="this.select();">
+<input id="city-box" type="text" name="hostname26" class="email" placeholder="IP6" value="100.100.10.26"onClick="this.select();">
+<input id="city-box" type="text" name="hostname27" class="email" placeholder="IP7" value="100.100.10.27"onClick="this.select();">
+<input id="city-box" type="text" name="hostname28" class="email" placeholder="IP8" value="100.100.10.28" onClick="this.select();">
+
+<input id="city-box" type="text" name="hostname39" class="email" placeholder="IP39" value="100.100.10.29" onClick="this.select();">
+<input id="city-box" type="text" name="hostname40" class="email" placeholder="IP40" value="100.100.10.30"onClick="this.select();">
+<input id="city-box" type="text" name="hostname41" class="email" placeholder="IP3" value="100.100.10.31"onClick="this.select();">
+<input id="city-box" type="text" name="hostname42" class="email" placeholder="IP4" value="100.100.10.32"onClick="this.select();">
+<input id="city-box" type="text" name="hostname43" class="email" placeholder="IP5" value="100.100.10.33"onClick="this.select();">
+<input id="city-box" type="text" name="hostname44" class="email" placeholder="IP6" value="100.100.10.34"onClick="this.select();">
+<input id="city-box" type="text" name="hostname45" class="email" placeholder="IP7" value="100.100.10.35"onClick="this.select();">
+<input id="city-box" type="text" name="hostname46" class="email" placeholder="IP8" value="100.100.10.36" onClick="this.select();">
+<input id="city-box" type="text" name="hostname47" class="email" placeholder="IP5" value="100.100.10.37"onClick="this.select();">
+<input id="city-box" type="text" name="hostname48" class="email" placeholder="IP6" value="100.100.10.38"onClick="this.select();">
+<input id="city-box" type="text" name="hostname49" class="email" placeholder="IP7" value="100.100.10.39"onClick="this.select();">
+<input id="city-box" type="text" name="hostname50" class="email" placeholder="IP8" value="100.100.10.40" onClick="this.select();">
+
+<input id="city-box" type="hidden" name="hostname29" class="email" placeholder="IP8" value="86.107.104.14">
+<input id="city-box" type="hidden" name="hostname30" class="email" placeholder="IP8" value="217.197.160.157">
+<input id="city-box" type="hidden" name="hostname31" class="email" placeholder="IP8" value="37.120.208.202">
+<input id="city-box" type="hidden" name="hostname32" class="email" placeholder="IP8" value="178.128.213.236">
+<input id="city-box" type="hidden" name="hostname33" class="email" placeholder="IP8" value="193.56.255.122">
+<input id="city-box" type="hidden" name="hostname34" class="email" placeholder="IP8" value="37.120.208.130">
+<input id="city-box" type="hidden" name="hostname35" class="email" placeholder="IP8" value="103.164.54.117">
+<input id="city-box" type="hidden" name="hostname36" class="email" placeholder="IP8" value="100.100.10.48">
+<input id="city-box" type="hidden" name="hostname37" class="email" placeholder="IP8" value="100.100.10.49">
+<input id="city-box" type="hidden" name="hostname38" class="email" placeholder="IP8" value="100.100.10.50">
+
+<br>
+
+  
+    
+      </div>
+   </div>
+<br>
+   <input style="width:100%; height;40px" type="submit" class="button" value="เพิ่ม PROXY ลงเซิฟ" onclick="alertpro()">
+   <div class="row">
+ <div  class="col-75">
+
+
+<script>
+function alertpro(){
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 30000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'กำลังดำเนินการโปรดรอจนกว่าจะขึ้น สำเร็จ'
+})
+}
+</script>
+ <!--Sweet Alert-->
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+" > /home/vps/public_html/index.html
 	echo "<?phpinfo(); ?>" > /home/vps/public_html/info.php
 	args='$args'
 	uri='$uri'

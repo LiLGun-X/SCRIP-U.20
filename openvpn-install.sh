@@ -448,6 +448,21 @@ END
         echo "<meta name='viewport' content='width=device-width, initial-scale=1'>"
         echo "<input class='button' type='button' value='TRUE NOPRO' onclick='myFunction();closeWin()'>" > /home/vps/public_html/index.html
 	echo "" > /home/vps/public_html/info.php
+        cd /
+        cat > /home/vps/public_html/index.html <<END
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<center>
+<br>
+<br>
+<br>
+<a href='http://$IP/$CLIENT.ovpn'><input style='width:70%' type='submit' class='button_active' value='TRUE NOPRO'></a>
+<br>
+<br>
+<input style='width:70%' class='button' type='button' value='TRUE NOPRO' onclick='myFunction();closeWin()'>
+<br>
+<br>
+<a href='1.html'><input style='width:70%' type='submit' class='button_active' value='TRUE NOPRO'></a>
+END     
 	args='$args'
 	uri='$uri'
 	document_root='$document_root'
@@ -572,21 +587,7 @@ fi
 echo ""
 echo -e "\033[0;32m { DOWNLOAD MENU SCRIPT }${NC} "
 echo "" 
-        cd /
-        cat > /home/vps/public_html/index.html <<END
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<center>
-<br>
-<br>
-<br>
-<a href='http://$IP/$CLIENT.ovpn'><input style='width:70%' type='submit' class='button_active' value='TRUE NOPRO'></a>
-<br>
-<br>
-<input style='width:70%' class='button' type='button' value='TRUE NOPRO' onclick='myFunction();closeWin()'>
-<br>
-<br>
-<a href='1.html'><input style='width:70%' type='submit' class='button_active' value='TRUE NOPRO'></a>
-END     
+        
    
 	cd /usr/local/bin
 wget -q -O m "https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Menu"
@@ -605,9 +606,6 @@ chmod +x /usr/local/bin/m
 		echo -e "$Passwords\n$Passwords\n"|passwd $Usernames &> /dev/null
 		;;
 	esac
-
-	
-	
 	
 	clear
 echo ""

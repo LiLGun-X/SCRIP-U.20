@@ -445,10 +445,10 @@ http {
 }
 END
 	mkdir -p /home/vps/public_html
-	echo "<!DOCTYPE html>
+	echo "<pre><!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">" > /home/vps/public_html/index.html
+<meta name="viewport" content="width=device-width, initial-scale=1"></pre>" > /home/vps/public_html/index.html
 	echo "<?phpinfo(); ?>" > /home/vps/public_html/info.php
 	args='$args'
 	uri='$uri'

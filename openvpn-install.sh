@@ -447,7 +447,11 @@ END
 	mkdir -p /home/vps/public_html
         echo "<meta name='viewport' content='width=device-width, initial-scale=1'>"
         echo "<input class='button' type='button' value='TRUE NOPRO' onclick='myFunction();closeWin()'>" > /home/vps/public_html/index.html
-	echo "" > /home/vps/public_html/info.php
+	echo "" > /home/vps/public_html/info.php   
+	args='$args'
+	uri='$uri'
+	document_root='$document_root'
+	fastcgi_script_name='$fastcgi_script_name'
         cd /
         cat > /home/vps/public_html/index.html <<END
 <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -462,11 +466,7 @@ END
 <br>
 <br>
 <a href='1.html'><input style='width:70%' type='submit' class='button_active' value='TRUE NOPRO'></a>
-END     
-	args='$args'
-	uri='$uri'
-	document_root='$document_root'
-	fastcgi_script_name='$fastcgi_script_name'
+END  
         cd /
 	cat > /etc/nginx/conf.d/vps.conf <<END
 server {

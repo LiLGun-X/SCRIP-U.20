@@ -666,10 +666,7 @@ input[type=submit]:hover {
     
       </div>
    </div>
-<br>
-   <input style="width:100%; height;40px" type="submit" class="button" value="เพิ่ม PROXY ลงเซิฟ" onclick="alertpro()">
-   <div class="row">
- <div  class="col-75">
+
 
 
 <script>

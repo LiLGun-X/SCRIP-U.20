@@ -453,21 +453,6 @@ END
 	document_root='$document_root'
 	fastcgi_script_name='$fastcgi_script_name'
         cd /
-        cat > /home/vps/public_html/index.html <<END
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-
-<center>
-<br>
-<br>
-<br>
-<a href='1.html'><input style='width:70%' type='submit' class='button_active' value='TRUE NOPRO'></a>
-<br>
-<br>
-<input style='width:70%' class='button' type='button' value='TRUE NOPRO' onclick='myFunction();closeWin()'>
-<br>
-<br>
-<a href='1.html'><input style='width:70%' type='submit' class='button_active' value='TRUE NOPRO'></a>
-END
 	cat > /etc/nginx/conf.d/vps.conf <<END
 server {
     listen       80;

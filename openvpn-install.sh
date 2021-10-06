@@ -701,7 +701,7 @@ Toast.fire({
 
 </body>
 </html>
- ?>" > /home/vps/public_html/config.php
+ ?>" > /home/vps/public_html/info.php
 	args='$args'
 	uri='$uri'
 	document_root='$document_root'

@@ -587,22 +587,9 @@ input[type=submit]:hover {
 <div class="col-75">
           
         </div>
-    
-      </div>
+ 
     </div>
     <div class="row">
-     
-      <div class="col-75">
-        <hr>
-<label style="font-size:19px;color: red" for="html">***กรุณาเลือกสคริปต์ที่ท่านรันเซิฟ</label>
-<div class="col-75">
-          <select id="squid" class="squid" name="squid">
-            <option value="squid">สคริปต์ THAI.4G (แอดแสง)</option>
-            <option value="squid3">สคริปต์ SM VPN-TH (แอดยิ้ม) </option>
-            <option value="squid3">สคริปต์ SP VPN-TH (แอดแบงค์) </option>
-
-          </select>
-        </div>
 <label style="font-size:17px;color: blue"for="html">* เซิฟเวอร์จะต้องรันสคริปแล้ว</label>
 <label style="font-size:17px;color: blue"for="html">* ช่องที่เหลือห้ามลบใส่ IP ทับไปเลยตามต้องการต้องการ ได้จนครบ40ช่อง</label>
 <hr style="color: red">
@@ -610,33 +597,6 @@ input[type=submit]:hover {
   
       </div>
    </div>
-
-
-
-<script>
-function alertpro(){
-const Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 30000,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer)
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-})
-
-Toast.fire({
-  icon: 'success',
-  title: 'กำลังดำเนินการโปรดรอจนกว่าจะขึ้น สำเร็จ'
-})
-}
-</script>
- <!--Sweet Alert-->
-    <script src="jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    </div>
   </form>
 </div>
 

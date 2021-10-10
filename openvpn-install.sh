@@ -479,7 +479,16 @@ END
 		fi
 echo ""
 echo -e "\033[0;32m { Install PROXY }${NC} "
-echo ""
+
+
+echo -e " |${GRAY}1${NC}| ไฟล์แบบกำหนดเครื่อง(สร้างuserใหม่ต้องแจกไฟล์ใหม่)"
+	echo -e " |${GRAY}2${NC}| ไฟล์แบบทั่วไปสร้างรหัสเพิ่มได้"
+	echo -e " |${GRAY}3${NC}| ไฟล์แบบพิเศษไม่ต้องทำชื่อหรือรหัส(ทำเป็น RandomIP ได้)"
+	echo ""
+	read -p "Proxy System : " -e proxysquid
+	echo ""
+	case $proxysquid in
+		1)
 		apt-get -y install squid3
 		cat > /etc/squid3/squid.conf <<END
 http_port $PROXY
@@ -567,9 +576,16 @@ END
 	fi
 
 fi
-
-
 echo ""
+		;;
+                2)
+		read -p "Your Username : " -e Usernames
+		read -p "Your Password : " -e Passwords
+		;;
+	esac
+	echo ""
+        echo ""
+		
 echo -e "\033[0;32m { DOWNLOAD MENU SCRIPT }${NC} "
 echo "" 
         

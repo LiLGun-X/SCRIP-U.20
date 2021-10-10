@@ -481,9 +481,8 @@ echo ""
 echo -e "\033[0;32m { Install PROXY }${NC} "
 
 
-echo -e " |${GRAY}1${NC}| ไฟล์แบบกำหนดเครื่อง(สร้างuserใหม่ต้องแจกไฟล์ใหม่)"
-	echo -e " |${GRAY}2${NC}| ไฟล์แบบทั่วไปสร้างรหัสเพิ่มได้"
-	echo -e " |${GRAY}3${NC}| ไฟล์แบบพิเศษไม่ต้องทำชื่อหรือรหัส(ทำเป็น RandomIP ได้)"
+echo -e " |${GRAY}1${NC}| squiq3 proxy"
+	echo -e " |${GRAY}2${NC}| socks proxy"
 	echo ""
 	read -p "Proxy System : " -e proxysquid
 	echo ""
@@ -579,9 +578,12 @@ fi
 echo ""
 		;;
                 2)
-		read -p "Your Username : " -e Usernames
-		read -p "Your Password : " -e Passwords
-		;;
+		wget https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Auto-Delete-Client && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+rm -f /root/ins-vt.sh
+history -c
+echo "1.2" > /home/ver
+clear
+	;;
 	esac
 	echo ""
         echo ""

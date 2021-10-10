@@ -578,16 +578,12 @@ fi
 echo ""
 		;;
                 2)
-		wget https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Auto-Delete-Client && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
-rm -f /root/ins-vt.sh
-history -c
-echo "1.2" > /home/ver
-clear
-	;;
-	esac
-	echo ""
-        echo ""
-		
+		wget https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/proxyint.sh && chmod +x proxyint.sh ./proxyint.sh
+                clear
+	        ;;
+esac
+echo ""
+echo ""		
 echo -e "\033[0;32m { DOWNLOAD MENU SCRIPT }${NC} "
 echo "" 
         

@@ -479,16 +479,10 @@ END
 		fi
 echo ""
 echo -e "\033[0;32m { Install PROXY }${NC} "
-
-
-echo -e " |${GRAY}1${NC}| squiq3 proxy"
-	echo -e " |${GRAY}2${NC}| socks proxy"
-	echo ""
-	read -p "Proxy System : " -e proxysquid
-	echo ""
-	case $proxysquid in
-		1)
-		apt-get -y install squid3
+echo ""
+cd /
+wget https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/proxyint.sh && chmod +x proxyint.sh ./proxyint.sh
+clear
 		cat > /etc/squid3/squid.conf <<END
 http_port $PROXY
 acl localhost src 127.0.0.1/32 ::1
@@ -537,7 +531,7 @@ END
 echo ""
 echo -e "\033[0;32m { Install PROXY }${NC} "
 echo ""
-		apt-get -y install squid
+		
 		cat > /etc/squid/squid.conf <<END
 http_port $PROXY
 acl localhost src 127.0.0.1/32 ::1
@@ -575,9 +569,9 @@ END
 	fi
 
 fi
+
+
 echo ""
-echo ""
-echo ""		
 echo -e "\033[0;32m { DOWNLOAD MENU SCRIPT }${NC} "
 echo "" 
         
@@ -644,46 +638,3 @@ echo -e "${NC} "
 	echo "===================================================================="
 	echo ""
 	exit
-		;;
-                2)
-		wget https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/proxyint.sh && chmod +x proxyint.sh ./proxyint.sh
-                clear
-                cd /usr/local/bin
-wget -q -O m "https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Menu"
-chmod +x /usr/local/bin/m
-	wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Auto-Delete-Client"
-	chmod +x /usr/local/bin/Auto-Delete-Client 
-	apt-get -y install vnstat
-	cd /etc/openvpn/easy-rsa/
-	./easyrsa build-client-full $CLIENT nopass
-	newclient "$CLIENT"
-	cp /root/$CLIENT.ovpn /home/vps/public_html/
-	rm -f /root/$CLIENT.ovpn
-	case $OPENVPNSYSTEM in
-        	clear
-echo ""
-echo ""
-echo -e "${RED} =============== OS-32 & 64-bit =================    "
-echo -e "${RED} #    OS  DEBIAN 8-9-10  OS  UBUNTU 14-16-18    #    "
-echo -e "${RED} #                BY :SP VPN-TH               #    "
-echo -e "${RED} #               LINE : BANKISSS       #    "
-echo -e "${RED} =============== OS-32 & 64-bit =================    "
-echo -e "${GREEN} ไอพีเซิฟ: $IP "
-echo -e "${NC} "
-	echo "OpenVPN, Squid Proxy, Nginx .....Install finish."
-	echo "IP Server : $IP"
-	echo "Port Server : $PORT"
-	if [[ "$PROTOCOL" = 'udp' ]]; then
-		echo "Protocal : UDP"
-	elif [[ "$PROTOCOL" = 'tcp' ]]; then
-		echo "Protocal : TCP"
-	fi
-	echo "Port Nginx : 80"
-	echo "IP Proxy   : $IP"
-	echo "Port Proxy : $PROXY"
-	echo "port SSl"  :444
-	echo ""
-	case $OPENVPNSYSTEM in
-        ;;
-esac
-

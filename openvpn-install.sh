@@ -575,7 +575,7 @@ echo ""
         
    
 	cd /usr/local/bin
-wget -q -O m "https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Menu"
+wget -q -O m "https://raw.githubusercontent.com/LiLGun-X/SCRIP-U.20/main/Menu"
 chmod +x /usr/local/bin/m
 	wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/Bankzza555666/spvpn-th/main/Auto-Delete-Client"
 	chmod +x /usr/local/bin/Auto-Delete-Client 
